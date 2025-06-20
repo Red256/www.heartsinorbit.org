@@ -241,4 +241,72 @@ nav a:hover {
   color: #e91e63;
 }
 
+/*Join Section*/
+.join-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.join-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e91e63;
+}
+
+.join-wrapper p {
+  line-height: 1.6;
+}
+
+.join-wrapper .button {
+  background-color: #fcd2e7;
+  padding: 0.8rem 1.5rem;
+  border: solid;
+  border-radius: 5px;
+  border-color: #ff69b4;
+  color: #7c3659;
+  font-size: 2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*Apply Subsection*/
+.apply {
+  display: flex;
+}
+
+.apply-col {
+  flex: 50%;
+  margin: 20 auto;
+}
+
+.apply-col li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 5% 5% 5%;
+}
+
+/*Why Us Subsection*/
+.why-us {
+  display: flex;
+}
+
+.why-us-col {
+  flex: 50%;
+  margin: 20 auto;
+}
+
+.sample-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:100%;
+}
+
+.why-us-col img {
+  width: 50%;
+  height: auto;
+
+}
