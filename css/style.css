@@ -319,3 +319,14 @@ nav a:hover {
     color: #333;
     mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
 }
+
+.rban h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rban p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
