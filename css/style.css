@@ -310,23 +310,3 @@ nav a:hover {
   height: auto;
 
 }
-
-/* Research: Banner*/
-.rban {
-    background: linear-gradient(135deg, #ffdce0, #ffe5ec);
-    text-align: center;
-    padding: 5rem 2rem;
-    color: #333;
-    mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
-}
-
-.rban h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.rban p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
