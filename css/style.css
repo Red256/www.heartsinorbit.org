@@ -80,6 +80,32 @@ nav a:hover {
   line-height: 1.6;
 }
 
+/*Focus Areas Subsection*/
+.focus-areas {
+  padding: 0 3rem 3rem 3rem;
+  text-align: center;
+}
+
+.focus-areas h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e91e63;
+}
+
+.focus-areas > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.focus-areas img {
+  width: 100%;
+}
+
+.focus-areas p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* Stats Section */
 .stats {
   display: flex;
