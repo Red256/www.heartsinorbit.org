@@ -97,6 +97,10 @@ nav a:hover {
     gap: 1rem;
 }
 
+.focus-areas > div > div {
+    width: 33%;
+}
+
 .focus-areas img {
   width: 100%;
 }
