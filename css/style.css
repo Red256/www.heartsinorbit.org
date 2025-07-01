@@ -313,6 +313,7 @@ nav a:hover {
 .apply-col li {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 5% 5% 5%;
 }
