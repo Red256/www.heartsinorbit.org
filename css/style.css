@@ -341,3 +341,25 @@ nav a:hover {
   height: auto;
 
 }
+
+/* gallery */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #fcd2e7;
+  float: center;
+  width: 33%;
+}
+
+div.gallery:hover {
+  border: 1px solid #ff69b4;
+}
+
+div.gallery img {
+  width: auto;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
