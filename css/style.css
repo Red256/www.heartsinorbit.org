@@ -346,8 +346,8 @@ nav a:hover {
 div.gallery {
   margin: 5px;
   border: 1px solid #fcd2e7;
-  float: center;
-  width: 33%;
+  float: left;
+  width: 180px;
 }
 
 div.gallery:hover {
