@@ -346,7 +346,6 @@ nav a:hover {
 div.gallery {
   margin: 5px;
   border: 1px solid #fcd2e7;
-  float: left;
   width: 50%;
 }
 
@@ -362,4 +361,11 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
