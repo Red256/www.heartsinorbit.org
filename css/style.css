@@ -28,13 +28,12 @@ nav a:hover {
 .hero {
     background: linear-gradient(135deg, #ffdce0, #ffe5ec);
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 2rem;
     color: #333;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
   font-family: 'Segoe UI', sans-serif;
 }
 
