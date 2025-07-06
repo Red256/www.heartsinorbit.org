@@ -342,6 +342,11 @@ nav a:hover {
 }
 
 /* gallery */
+div.gallery-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 div.gallery {
   margin: 5px;
   border: 1px solid #fcd2e7;
