@@ -373,6 +373,7 @@ div.desc {
     gap: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    padding: 2rem;
 }
 
 .tab {
@@ -405,6 +406,7 @@ div.desc {
     align-items: center;
     justify-content: center;
     font-size: 1.5em;
+    padding: 2rem;
 }
 
 .more {
