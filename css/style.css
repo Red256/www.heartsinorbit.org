@@ -63,9 +63,22 @@ nav a:hover {
 }
 
 /* About Section */
+.about-container {
+    margin: 0 3rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    justify-items: center;
+}
+
+.about-container img {
+  width: 250px;
+  margin: 5rem 0;
+  margin-left: auto;
+}
+  
 .about {
   padding: 3rem 2rem;
-  text-align: center;
   background-color: #ffffff;
   color: #333;
   max-width: 800px;
