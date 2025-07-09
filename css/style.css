@@ -413,7 +413,7 @@ div.desc {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 0 20px 40px;
+    padding: 0 5px 5px;
 }
 
 .slide {
