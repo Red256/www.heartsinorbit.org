@@ -407,6 +407,13 @@ div.desc {
     background-color: #d3d3d3;
 }
 
+.rsrch h2 {
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e91e63;
+}
+
 /* slides */
 .slides {
     display: flex;
@@ -417,7 +424,7 @@ div.desc {
 
 .slide {
     width: 80%;
-    height: 80vh;
+    height: auto;
     border: 2px solid black;
     border-radius: 20px;
     display: flex;
