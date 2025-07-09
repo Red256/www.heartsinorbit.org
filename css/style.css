@@ -385,6 +385,7 @@ div.desc {
   text-align: center;
 }
 
+/* research navbar */
 .tabs {
     display: flex;
     justify-content: center;
@@ -406,6 +407,7 @@ div.desc {
     background-color: #d3d3d3;
 }
 
+/* slides */
 .slides {
     display: flex;
     flex-direction: column;
@@ -430,7 +432,7 @@ div.desc {
     max-width: 100%;
     max-height: 100%;
     border-radius: 15px;
-    object-fit: contain;
+    object-fit: fill;
 }
 
 /* Animations */
