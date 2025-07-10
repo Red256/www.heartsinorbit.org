@@ -407,10 +407,12 @@ div.desc {
     background-color: #d3d3d3;
 }
 
-.rsrch h2 {
-  justify-content: center;
-  align-items: center;
+/* rsrch desc */
+.rsrch {
   text-align: center;
+}
+
+.rsrch h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #e91e63;
