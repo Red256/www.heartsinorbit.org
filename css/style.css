@@ -461,3 +461,46 @@ div.desc {
     transform: translateX(0);
   }
 }
+
+/*Projects Page */
+.projects-page {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.project-double-col {
+  display: flex;
+}
+
+.project-col {
+  flex: 50%;
+  margin: 20 auto;
+}
+
+.future-cols {
+  display: flex;
+}
+
+.future-col {
+  flex: 25%;
+  margin: 20 auto;
+  padding: 25px;
+}
+
+.projects-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #e91e63;
+}
+
+.future-img {
+  width: 80%;
+  aspect-ratio: 1/1;
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.future-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+}
