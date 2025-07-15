@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = entry.target;
 
       waitForImages(el).then(() => {
-        if (el.classList.contains('stagger')) {
+        if (el.classList.contains('slide-stagger')) {
           Array.from(el.children).forEach((child, i) => {
             child.style.animationDelay = `${i * 0.2}s`;
             child.classList.add('visible');
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, options);
 
   document
-    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .stagger')
+    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
     .forEach(el => observer.observe(el));
 });
 
