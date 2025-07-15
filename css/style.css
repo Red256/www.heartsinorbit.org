@@ -464,11 +464,11 @@ div.desc {
   animation: slideInFromLeft 0.6s ease-out forwards;
 }
 
-.stagger > * {
+.slide-stagger > * {
   opacity: 0;
   transform: translateX(-50px);
 }
-.stagger > *.visible {
+.slide-stagger > *.visible {
   animation: slideInFromLeft 0.6s ease-out forwards;
 }
 
