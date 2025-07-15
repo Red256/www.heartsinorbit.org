@@ -32,16 +32,11 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-  // replace the contents of every <nav>
-  document.querySelectorAll('nav').forEach(nav => {
-    nav.innerHTML = navHTML;
-  });
+  // replace the contents of first <nav>
+  document.querySelector('nav').innerHTML = navHTML;
 
-  // replace the contents of every <footer>
-  document.querySelectorAll('footer').forEach(footer => {
-    footer.innerHTML = footerHTML;
-  });
-});
+  // replace the contents of first <footer>
+  document.querySelectorAll('footer').innerHTML = footerHTML;
 
 // Animations
 document.addEventListener('DOMContentLoaded', () => {
