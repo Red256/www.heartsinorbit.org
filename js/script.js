@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
 
-      if (entry.target.classList.contains('stagger')) {
+      if (entry.target.classList.contains('slide-stagger')) {
         Array.from(entry.target.children).forEach((child, i) => {
           child.style.animationDelay = `${i * 0.2}s`;
           child.classList.add('visible');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, options);
 
   document
-    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .stagger')
+    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
     .forEach(el => observer.observe(el));
 });
 
