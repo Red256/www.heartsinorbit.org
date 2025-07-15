@@ -45,27 +45,35 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Animations
 document.addEventListener('DOMContentLoaded', () => {
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
+  const options = { root: null, rootMargin: '0px', threshold: 0.1 };
+
+  function waitForImages(el) {
+    const imgs = el.querySelectorAll('img');
+    const promises = Array.from(imgs).map(img =>
+      img.complete
+        ? Promise.resolve()
+        : new Promise(resolve => img.addEventListener('load', resolve, { once: true }))
+    );
+    return Promise.all(promises);
+  }
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
+      const el = entry.target;
 
-      if (entry.target.classList.contains('slide-stagger')) {
-        Array.from(entry.target.children).forEach((child, i) => {
-          child.style.animationDelay = `${i * 0.2}s`;
-          child.classList.add('visible');
-        });
-      } 
-      else {
-        entry.target.classList.add('visible');
-      }
+      waitForImages(el).then(() => {
+        if (el.classList.contains('slide-stagger')) {
+          Array.from(el.children).forEach((child, i) => {
+            child.style.animationDelay = `${i * 0.2}s`;
+            child.classList.add('visible');
+          });
+        } else {
+          el.classList.add('visible');
+        }
+      });
 
-      obs.unobserve(entry.target);
+      obs.unobserve(el);
     });
   }, options);
 
@@ -73,4 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
     .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
     .forEach(el => observer.observe(el));
 });
-
