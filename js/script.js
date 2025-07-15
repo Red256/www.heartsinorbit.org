@@ -32,14 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-  // replace the contents of first <nav>
-  document.querySelector('nav').innerHTML = navHTML;
+  // Replace the contents of the first <nav>
+  const nav = document.querySelector('nav');
+  if (nav) nav.innerHTML = navHTML;
 
-  // replace the contents of first <footer>
-  document.querySelectorAll('footer').innerHTML = footerHTML;
+  // Replace the contents of the first <footer>
+  const footer = document.querySelector('footer');
+  if (footer) footer.innerHTML = footerHTML;
 
-// Animations
-document.addEventListener('DOMContentLoaded', () => {
+  // Animations
   const options = {
     root: null,
     rootMargin: '0px',
@@ -87,4 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
     .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
     .forEach(el => observer.observe(el));
 });
-
