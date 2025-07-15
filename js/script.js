@@ -45,15 +45,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Animations
 document.addEventListener('DOMContentLoaded', () => {
-  const options = { root: null, rootMargin: '0px', threshold: 0.1 };
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
 
   function waitForImages(el) {
-    const imgs = el.querySelectorAll('img');
-    const promises = Array.from(imgs).map(img =>
+    const imgs = [];
+
+    if (el.tagName === 'IMG') {
+      imgs.push(el);
+    }
+    imgs.push(...el.querySelectorAll('img'));
+
+    const promises = imgs.map(img =>
       img.complete
         ? Promise.resolve()
         : new Promise(resolve => img.addEventListener('load', resolve, { once: true }))
     );
+
     return Promise.all(promises);
   }
 
@@ -63,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = entry.target;
 
       waitForImages(el).then(() => {
-        if (el.classList.contains('slide-stagger')) {
+        if (el.classList.contains('stagger')) {
           Array.from(el.children).forEach((child, i) => {
             child.style.animationDelay = `${i * 0.2}s`;
             child.classList.add('visible');
@@ -78,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, options);
 
   document
-    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
+    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .stagger')
     .forEach(el => observer.observe(el));
 });
+
