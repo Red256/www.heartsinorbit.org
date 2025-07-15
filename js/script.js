@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Animations
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const options = {
     root: null,
     rootMargin: '0px',
@@ -53,15 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Add the .visible class to trigger the animation
+      if (!entry.isIntersecting) return;
+
+      if (entry.target.classList.contains('stagger')) {
+        Array.from(entry.target.children).forEach((child, i) => {
+          child.style.animationDelay = `${i * 0.2}s`;
+          child.classList.add('visible');
+        });
+      } 
+      else {
         entry.target.classList.add('visible');
-        // Stop observing once it's visible
-        obs.unobserve(entry.target);
       }
+
+      obs.unobserve(entry.target);
     });
   }, options);
 
-  document.querySelectorAll('.fade-slide.hidden')
+  document
+    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .stagger')
     .forEach(el => observer.observe(el));
 });
+
