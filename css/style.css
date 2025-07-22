@@ -472,6 +472,11 @@ div.desc {
   animation: slideInFromLeft 0.6s ease-out forwards;
 }
 
+.slide-stagger > *.center {
+  align-items: center;
+  justify-content: center;
+}
+
 @keyframes slideInFromRight {
   to {
     opacity: 1;
