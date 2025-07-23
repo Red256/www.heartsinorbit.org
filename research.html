@@ -14,11 +14,12 @@
             <p>Astronomy, Music, and Physiology</p>
         </section>
             <nav class="tabs">
-                <button class="tab active">Presentation</button>
-                <button class="tab">Book</button>
+                <button class="tab active" data-layout="presentation">Presentation</button>
+                <button class="tab" data-layout="presentation">Book</button>
             </nav>
 
-            <main class="slides">
+            <div id="layout-presentation">
+                <main class="slides">
                 <section class="slide-stagger center">
                     <div class="slide">
                         <img src="assets/photos/HIO Research Team Slide/HIO Research Team Slide-01.png" alt="Intro Slide">
@@ -132,6 +133,11 @@
                         <img src="assets/photos/HIO Research Team Slide/HIO Research Team Slide-19.png" alt="Slide 19">
                     </div>
                 </section>
+            </div>
+            
+            <div id="layout-book">
+                <p>Nothing for now.</p>
+            </div>
             </main>
 
         <!-- Footer Section -->
