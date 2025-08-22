@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <li><a href="photos.html">Photos</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="research.html">Research</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="join.html">Join</a></li>
     </ul>
   `;
