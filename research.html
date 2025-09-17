@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="css/style.css" rel="stylesheet" type="text/css">
-        <title>Our Research</title>
+        <title>Our Research - Hearts in Orbit</title>
     </head>
     <body>
-        <!-- navbar-->
+        <!-- Main Navigation -->
         <nav></nav>
-        <section class="hero"> <!--top banner-->
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
             <h1>Our Research</h1>
             <p>Astronomy, Music, and Physiology</p>
+            </div>
         </section>
-            <nav class="tabs">
+        
+        <!-- Research Tabs -->
+        <section class="research-tabs">
+            <div class="tabs">
                 <button class="tab active" data-layout="presentation">Presentation</button>
                 <button class="tab" data-layout="book">Book</button>
-            </nav>
+            </div>
+        </section>
 
+        <!-- Research Content -->
             <div id="layout-presentation">
                 <main class="slides">
                 <section class="slide-stagger center">
@@ -133,15 +142,19 @@
                         <img src="assets/photos/HIO Research Team Slide/HIO Research Team Slide-19.png" alt="Slide 19">
                     </div>
                 </section>
+            </main>
             </div>
             
             <div id="layout-book">
-                <p>Nothing for now.</p>
+            <div class="book-content">
+                <h2>Research Book</h2>
+                <p>Coming soon - detailed research findings and methodology.</p>
             </div>
-            </main>
+            </div>
 
         <!-- Footer Section -->
         <footer class="footer"></footer>
         <script src="js/script.js"></script>
+        <script src="js/tabs.js"></script>
     </body>
 </html>

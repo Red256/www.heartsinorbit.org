@@ -1,14 +1,14 @@
-// Navbar and Footer
+// Modern Website Functionality
 window.addEventListener('DOMContentLoaded', () => {
   const navHTML = `
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="join.html">Join</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="team.html" class="nav-link">Team</a></li>
+      <li><a href="photos.html" class="nav-link">Photos</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="join.html" class="nav-link">Join</a></li>
     </ul>
   `;
 
@@ -40,6 +40,44 @@ window.addEventListener('DOMContentLoaded', () => {
   // Replace the contents of the first <footer>
   const footer = document.querySelector('footer');
   if (footer) footer.innerHTML = footerHTML;
+
+  // Add scroll effect to navigation
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (nav) {
+      if (currentScrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    
+    lastScrollY = currentScrollY;
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Add active class to current page navigation
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
 
   // Animations
   const options = {
