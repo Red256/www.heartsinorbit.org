@@ -73,8 +73,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Add active class to current page navigation
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPageName = currentPage === '' ? 'index.html' : currentPage;
+  
   document.querySelectorAll('.nav-link').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    const linkHref = link.getAttribute('href');
+    // Remove any existing active class first
+    link.classList.remove('active');
+    
+    // Check if this link matches the current page
+    if (linkHref === currentPageName || 
+        (currentPageName === 'index.html' && linkHref === 'index.html') ||
+        (currentPageName === 'team.html' && linkHref === 'team.html') ||
+        (currentPageName === 'photos.html' && linkHref === 'photos.html') ||
+        (currentPageName === 'projects.html' && linkHref === 'projects.html') ||
+        (currentPageName === 'research.html' && linkHref === 'research.html') ||
+        (currentPageName === 'blog.html' && linkHref === 'blog.html') ||
+        (currentPageName === 'join.html' && linkHref === 'join.html')) {
       link.classList.add('active');
     }
   });

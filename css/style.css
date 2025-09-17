@@ -168,6 +168,11 @@ nav ul {
   margin: 0 auto;
 }
 
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
 nav a {
   text-decoration: none;
   color: var(--text-secondary);
@@ -178,6 +183,8 @@ nav a {
   transition: var(--transition-fast);
   position: relative;
   overflow: hidden;
+  display: block;
+  cursor: pointer;
 }
 
 nav a::before {
@@ -191,19 +198,25 @@ nav a::before {
   transition: var(--transition-normal);
 }
 
-nav a:hover {
+nav a:hover:not(.active) {
   color: var(--space-pink);
   background: rgba(236, 72, 153, 0.1);
   transform: translateY(-2px);
 }
 
-nav a:hover::before {
+nav a:hover:not(.active)::before {
   left: 100%;
 }
 
 nav a.active {
   color: var(--space-pink);
-  background: rgba(236, 72, 153, 0.15);
+  background: rgba(236, 72, 153, 0.2);
+  font-weight: 600;
+  transform: none;
+}
+
+nav a.active::before {
+  left: 100%;
 }
 
 /* Theme Toggle Button */
