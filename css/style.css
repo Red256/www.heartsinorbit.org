@@ -1208,7 +1208,7 @@ div.desc {
 
 /* Team Page Styles */
 .team-section {
-  padding: var(--space-4xl) var(--space-xl);
+  padding: var(--space-2xl) var(--space-xl);
   max-width: 1400px;
   margin: 0 auto;
 }
