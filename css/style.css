@@ -1320,7 +1320,7 @@ div.desc {
   border: 3px solid rgba(236, 72, 153, 0.3);
   transition: var(--transition-normal);
   box-shadow: var(--shadow-lg);
-  background: linear-gradient(135deg, var(--space-purple), var(--space-pink));
+  background: linear-gradient(135deg, var(--space-blue), var(--space-cyan));
 }
 
 /* Placeholder for missing images */
@@ -1336,7 +1336,7 @@ div.desc {
 
 .team-member:hover .member-photo img {
   transform: scale(1.05);
-  border-color: var(--space-pink);
+  border-color: var(--space-blue);
   box-shadow: var(--shadow-xl);
 }
 
