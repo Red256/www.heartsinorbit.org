@@ -1352,7 +1352,7 @@ div.desc {
 .member-role {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--space-pink);
+  color: var(--space-blue);
   margin-bottom: var(--space-md);
   text-transform: uppercase;
   letter-spacing: 0.5px;
