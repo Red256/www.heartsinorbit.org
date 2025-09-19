@@ -818,6 +818,21 @@ nav a.active::before {
   color: var(--text-primary);
 }
 
+/* Instagram link styling */
+.footer-content a[href*="instagram"] {
+  color: #E4405F !important;
+  font-weight: 600;
+}
+
+[data-theme="light"] .footer-content a[href*="instagram"] {
+  color: #E4405F !important;
+}
+
+.footer-content a[href*="instagram"]:hover {
+  color: #C13584 !important;
+  transform: translateX(5px);
+}
+
 /* Footer bottom */
 .footer-bottom {
   text-align: center;
@@ -1393,6 +1408,10 @@ div.desc {
   letter-spacing: 0.5px;
 }
 
+[data-theme="light"] .member-role {
+  color: var(--space-pink);
+}
+
 .founder {
   border: 4px solid var(--space-pink);
   background: rgba(236, 72, 153, 0.1);
@@ -1402,6 +1421,10 @@ div.desc {
 .founder .member-role {
   color: var(--space-cyan);
   font-weight: 600;
+}
+
+[data-theme="light"] .founder .member-role {
+  color: var(--space-purple);
 }
 
 .member-description {
