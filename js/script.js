@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <div class="contact">
         <h4>CONTACT</h4>
         <p><strong>Email:</strong> heartsinorbit.project@gmail.com</p>
-        <p><strong>Instagram:</strong> @heartsinorbit2025</p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/heartsinorbitt/">@heartsinorbitt</a></p>
       </div>
       <div class="footer-nav">
         <h4>NAVIGATION</h4>
