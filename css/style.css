@@ -818,21 +818,6 @@ nav a.active::before {
   color: var(--text-primary);
 }
 
-/* Instagram link styling */
-.footer-content a[href*="instagram"] {
-  color: #E4405F !important;
-  font-weight: 600;
-}
-
-[data-theme="light"] .footer-content a[href*="instagram"] {
-  color: #E4405F !important;
-}
-
-.footer-content a[href*="instagram"]:hover {
-  color: #C13584 !important;
-  transform: translateX(5px);
-}
-
 /* Footer bottom */
 .footer-bottom {
   text-align: center;
