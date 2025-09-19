@@ -1402,14 +1402,14 @@ div.desc {
 .member-role {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--space-blue);
+  color: var(--space-cyan);
   margin-bottom: var(--space-md);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 [data-theme="light"] .member-role {
-  color: var(--space-pink);
+  color: var(--space-blue);
 }
 
 .founder {
