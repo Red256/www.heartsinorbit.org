@@ -1495,7 +1495,7 @@ div.desc {
 }
 
 [data-theme="dark"] .post-card {
-  background: rgba(30, 27, 75, 0.05);
+  background: rgba(14, 12, 49, 0.05);
 }
 
 [data-theme="light"] .post-card {
@@ -1513,6 +1513,10 @@ div.desc {
 .post-content h2 {
   margin: 0 0 0.5rem;
   font-size: 1.5rem;
+}
+
+[data-theme="dark"] .post-content a {
+  background: linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%);
 }
 
 .post-content .post-date {
