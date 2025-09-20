@@ -1481,4 +1481,35 @@ div.desc {
   }
 }
 
-/* blog post catalog */
+/* Blog Post Page*/
+.post-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.post-card {
+  background: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(+5px);
+}
+
+.post-content {
+  padding: 2rem;
+}
+
+.post-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.post-content .post-date {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 1rem;
+}
