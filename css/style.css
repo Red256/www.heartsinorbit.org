@@ -1490,9 +1490,16 @@ div.desc {
 }
 
 .post-card {
-  background: var(--card-bg, #ffffff);
   border-radius: 12px;
   transition: transform 0.2s ease;
+}
+
+[data-theme="dark"] .post-card {
+  background: rgba(30, 27, 75, 0.05);
+}
+
+[data-theme="light"] .post-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 .post-card:hover {
