@@ -1521,7 +1521,7 @@ div.desc {
 }
 
 [data-theme="dark"] .post-content a {
-  color: linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%);
+  color: #3b82f6 100%;
 }
 
 .post-content .post-date {
