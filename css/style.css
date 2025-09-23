@@ -1492,10 +1492,16 @@ div.desc {
 .post-card {
   border-radius: 12px;
   transition: transform 0.2s ease;
+  padding: var(--space-2xl);
+  margin: var(--space-2xl) auto;
+  box-shadow: var(--shadow-md);
+  max-width: 800px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
 }
 
 [data-theme="dark"] .post-card {
-  background: rgba(2, 1, 28, 0.05);
+  background: rgba(30, 27, 75, 0.8);
 }
 
 [data-theme="light"] .post-card {
@@ -1520,8 +1526,18 @@ div.desc {
   text-align: right;
 }
 
+.post-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: var(--transition-fast);
+}
+
 [data-theme="dark"] .post-content a {
-  color: #3b82f6 100%;
+  color: var(--space-cyan) 100%;
+}
+
+[data-theme="dark"] .post-content a {
+  color: var(--space-blue) 100%;
 }
 
 .post-content .post-date {
