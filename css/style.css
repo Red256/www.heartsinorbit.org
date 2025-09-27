@@ -1020,6 +1020,10 @@ div.desc {
   border-radius: var(--radius-2xl);
 }
 
+[data-theme="light"] .book-content {
+  color: var(--text-primary);
+}
+
 [data-theme="dark"] .book-content {
   background: rgba(30, 27, 75, 0.05);
 }
