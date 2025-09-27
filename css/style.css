@@ -1523,6 +1523,8 @@ div.desc {
 }
 
 .post-content h3 {
+  font-size: 0.5rem;
+  font-style: normal;
   text-align: right;
 }
 
