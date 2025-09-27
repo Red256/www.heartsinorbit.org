@@ -1553,6 +1553,7 @@ div.desc {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeInUp 1s ease-out;
 }
 
 [data-theme="dark"] .post-content a {
