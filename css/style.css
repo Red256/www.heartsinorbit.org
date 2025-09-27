@@ -1523,9 +1523,13 @@ div.desc {
 }
 
 .post-content h3 {
+  text-align: right;
+}
+
+.post-content h4 {
+  text-align: center;
   font-size: 0.5rem;
   font-style: normal;
-  text-align: right;
 }
 
 .post-content a {
