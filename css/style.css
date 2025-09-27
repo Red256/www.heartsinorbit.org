@@ -1540,6 +1540,9 @@ div.desc {
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-xl);
   transition: var(--transition-normal);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 [data-theme="dark"] .post-content a {
