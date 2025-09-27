@@ -1532,6 +1532,16 @@ div.desc {
   transition: var(--transition-fast);
 }
 
+.post-content img {
+  width: 80%;
+  height: auto;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  transition: var(--transition-normal);
+}
+
 [data-theme="dark"] .post-content a {
   color: var(--space-cyan) 100%;
 }
