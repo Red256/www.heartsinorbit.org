@@ -1550,17 +1550,16 @@ div.desc {
 }
 
 .post-content img {
-  width: 80%;
+  max-width: 100%;
+  width: auto;
   height: auto;
-  max-width: 400px;
-  height: auto;
+  display: block;
+  margin: 1rem auto;
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-xl);
   transition: var(--transition-normal);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   animation: fadeInUp 1s ease-out;
+  object-fit: contain;
 }
 
 [data-theme="dark"] .post-content a {
