@@ -271,7 +271,7 @@ nav a.active::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+    text-align: center;
   padding: var(--space-3xl) var(--space-xl);
   background: 
     radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
@@ -420,10 +420,10 @@ nav a.active::before {
   padding: var(--space-4xl) var(--space-xl);
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
+    display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4xl);
-  align-items: center;
+    align-items: center;
 }
 
 .about-container img {
@@ -439,7 +439,7 @@ nav a.active::before {
   transform: scale(1.05);
   box-shadow: var(--shadow-2xl);
 }
-
+  
 .about {
   padding: var(--space-2xl);
   background: rgba(255, 255, 255, 0.8);
@@ -949,11 +949,11 @@ div.desc {
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   gap: var(--space-md);
   margin-bottom: var(--space-2xl);
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .tab {
@@ -963,7 +963,7 @@ div.desc {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   color: var(--text-secondary);
-  cursor: pointer;
+    cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
   transition: var(--transition-normal);
@@ -1057,9 +1057,9 @@ div.desc {
 
 /* Research Slides */
 .slides {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   gap: var(--space-2xl);
   padding: var(--space-2xl) var(--space-xl);
   max-width: 1200px;
@@ -1069,14 +1069,14 @@ div.desc {
 .slide {
   width: 100%;
   max-width: 900px;
-  height: auto;
+    height: auto;
   border: 2px solid var(--border-color);
   border-radius: var(--radius-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    overflow: hidden;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow-lg);
@@ -1094,10 +1094,10 @@ div.desc {
 }
 
 .slide img {
-  width: 100%;
+    width: 100%;
   height: auto;
   border-radius: var(--radius-xl);
-  object-fit: contain;
+    object-fit: contain;
   display: block;
 }
 
@@ -1600,7 +1600,7 @@ div.desc {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--bg-primary);
+  position: relative;
 }
 
 .back-to-cards-btn {
@@ -1613,11 +1613,12 @@ div.desc {
   border: 1px solid rgba(255, 64, 129, 0.2);
   color: var(--text-primary);
   border-radius: 8px;
-  font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 2rem;
   font-size: 1rem;
+  position: absolute;
+  top: 2rem;
+  left: -180px;
 }
 
 .back-to-cards-btn:hover {
