@@ -1502,9 +1502,10 @@ div.desc {
 .post-catalog {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6rem;
+  column-gap: 6rem;
+  row-gap: 3rem;
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -1520,16 +1521,17 @@ div.desc {
   box-shadow: var(--shadow-md);
   background: rgba(255, 245, 248, 0.75);
   backdrop-filter: blur(10px);
-  border: 6px solid #000000;
+  border: 3px solid #000000;
   overflow: hidden;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
 [data-theme="dark"] .post-card {
   background: rgba(30, 27, 75, 0.75);
-  border: 6px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .post-card:hover {
@@ -1539,9 +1541,9 @@ div.desc {
 
 .post-card .card-image {
   width: 100%;
-  height: 250px;
+  height: 180px;
   object-fit: cover;
-  border-bottom: 2px solid rgba(255, 64, 129, 0.2);
+  border-radius: 8px;
 }
 
 [data-theme="dark"] .post-card .card-image {
