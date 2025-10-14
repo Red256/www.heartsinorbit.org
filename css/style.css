@@ -1583,6 +1583,7 @@ div.desc {
   margin-top: 1rem;
   align-self: flex-start;
   font-size: 0.875rem;
+  font-style: italic;
 }
 
 .read-more-btn:hover {
