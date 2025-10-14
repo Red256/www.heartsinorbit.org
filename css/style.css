@@ -1521,7 +1521,7 @@ div.desc {
   box-shadow: var(--shadow-md);
   background: rgba(255, 245, 248, 0.75);
   backdrop-filter: blur(10px);
-  border: 2px solid #808080;
+  border: none;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -1531,7 +1531,7 @@ div.desc {
 
 [data-theme="dark"] .post-card {
   background: rgba(30, 27, 75, 0.75);
-  border: 2px solid #808080;
+  border: none;
 }
 
 .post-card:hover {
@@ -1565,25 +1565,22 @@ div.desc {
 }
 
 .post-card .card-content h3 {
-  font-size: 1rem;
-  margin: 0;
-  color: var(--text-secondary);
-  font-weight: 500;
-  text-align: left;
+  display: none;
 }
 
 .read-more-btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 600;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   margin-top: 1rem;
   align-self: flex-start;
+  font-size: 0.875rem;
 }
 
 .read-more-btn:hover {
