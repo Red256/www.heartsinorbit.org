@@ -1521,7 +1521,7 @@ div.desc {
   box-shadow: var(--shadow-md);
   background: rgba(255, 245, 248, 0.75);
   backdrop-filter: blur(10px);
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -1531,7 +1531,7 @@ div.desc {
 
 [data-theme="dark"] .post-card {
   background: rgba(30, 27, 75, 0.75);
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .post-card:hover {
@@ -1541,7 +1541,7 @@ div.desc {
 
 .post-card .card-image {
   width: 100%;
-  height: 180px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
 }
