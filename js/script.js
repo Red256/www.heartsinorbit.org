@@ -182,6 +182,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }, options);
 
   document
-    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger')
+    .querySelectorAll('.slide-right.hidden, .slide-left.hidden, .slide-stagger, .post-card.hidden')
     .forEach(el => observer.observe(el));
 });

@@ -1527,17 +1527,54 @@ div.desc {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.post-card:nth-child(1) { animation-delay: 0.1s; }
-.post-card:nth-child(2) { animation-delay: 0.2s; }
-.post-card:nth-child(3) { animation-delay: 0.3s; }
-.post-card:nth-child(4) { animation-delay: 0.4s; }
-.post-card:nth-child(5) { animation-delay: 0.5s; }
-.post-card:nth-child(6) { animation-delay: 0.6s; }
-.post-card:nth-child(7) { animation-delay: 0.7s; }
+.post-card.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.post-card.visible {
+  animation: fadeInUp 1s ease-out 0s forwards;
+}
+
+.post-card.hidden .card-image {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.post-card.visible .card-image {
+  animation: fadeInScale 0.5s ease-out 0s forwards, fadeInUp 1s ease-out 0s forwards;
+}
+
+.post-card.hidden .card-content h2 {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.post-card.visible .card-content h2 {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+}
+
+.post-card.hidden .read-more-btn {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.post-card.visible .read-more-btn {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 [data-theme="dark"] .post-card {
   background: rgba(30, 27, 75, 0.75);
