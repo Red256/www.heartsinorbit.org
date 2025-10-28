@@ -141,6 +141,11 @@ nav {
   border-bottom: 1px solid var(--border-color);
   padding: var(--space-md) 0;
   transition: var(--transition-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
 }
 
 [data-theme="dark"] nav {
@@ -159,13 +164,10 @@ nav.scrolled {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: var(--space-2xl);
   margin: 0;
-  padding: 0 var(--space-xl);
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0;
+  align-items: center;
 }
 
 nav li {
@@ -252,9 +254,23 @@ nav a.active::before {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
   nav ul {
     gap: var(--space-lg);
     padding: 0 var(--space-md);
+    flex-wrap: wrap;
+  }
+  
+  nav .nav-tabs {
+    margin-left: 0;
+  }
+  
+  nav .nav-tabs::before {
+    display: none;
   }
   
   nav a {
@@ -946,6 +962,48 @@ div.desc {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+}
+
+/* Tabs in the nav header */
+nav .nav-tabs {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  margin-left: var(--space-lg);
+  position: relative;
+}
+
+nav .nav-tabs::before {
+  content: '';
+  position: absolute;
+  left: -var(--space-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 30px;
+  background: var(--border-color);
+}
+
+/* Style tabs inside nav to look like nav items */
+nav .nav-tabs .tab {
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  backdrop-filter: none;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+}
+
+nav .nav-tabs .tab:hover {
+  background: rgba(236, 72, 153, 0.1);
+  transform: translateY(-2px);
+  border: none;
+}
+
+nav .nav-tabs .tab.active {
+  background: rgba(236, 72, 153, 0.2);
+  color: var(--space-pink);
+  box-shadow: none;
 }
 
 .tabs {
