@@ -956,10 +956,10 @@ div.desc {
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   gap: var(--space-md);
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .tab {
@@ -1138,12 +1138,25 @@ div.desc {
   animation: slideInFromLeft 0.6s ease-out forwards;
 }
 
-.slide-stagger > * {
+/* Slide animations for research page */
+.slide-stagger {
   opacity: 0;
-  transform: translateX(-50px);
 }
-.slide-stagger > *.visible {
-  animation: slideInFromLeft 0.6s ease-out forwards;
+
+.slide-stagger.slide-from-left {
+  transform: translateX(-100px);
+}
+
+.slide-stagger.slide-from-right {
+  transform: translateX(100px);
+}
+
+.slide-stagger.visible.slide-from-left {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.slide-stagger.visible.slide-from-right {
+  animation: slideInFromRight 0.8s ease-out forwards;
 }
 
 @keyframes slideInFromRight {
