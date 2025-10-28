@@ -30,18 +30,14 @@
             <div class="hero-content">
             <h1>Blogs & Designs</h1>
             </div>
-        </section>
-        
-        <!-- Blog Tabs (now in nav, but kept here for layout content) -->
-        <div style="display:none;" id="nav-tabs-container">
             <div class="tabs">
-                <button class="tab active" data-layout="blogs">Blogs</button>
-                <button class="tab" data-layout="designs">Designs</button>
+                <button class="tab active" data-layout="designs">Designs</button>
+                <button class="tab" data-layout="blogs">Blogs</button>
             </div>
-        </div>
+        </section>
     
         <!-- Blog Section -->
-        <div id="layout-blogs">
+        <div id="layout-blogs" style="display: none;">
         <div id="blog-cards" class="post-catalog">
           <!-- Blog Card 1 -->
           <article class="post-card hidden" data-post-id="1" onclick="showFullPost(1)">
@@ -304,7 +300,7 @@
         </div>
         
         <!-- Designs Section -->
-        <div id="layout-designs" style="display: none;">
+        <div id="layout-designs">
           <div class="designs-grid">
             <!-- Carousel for Folder 1 -->
             <div class="design-carousel" data-folder="1">
@@ -456,6 +452,11 @@
                 document.getElementById("layout-blogs").style.display = "block";
               } else if (layout === "designs") {
                 document.getElementById("layout-designs").style.display = "block";
+              }
+              
+              // Update display for blog-cards if switching to blogs
+              if (layout === "blogs") {
+                document.getElementById("blog-cards").style.display = "grid";
               }
             });
           });

@@ -37,19 +37,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   if (nav) nav.innerHTML = navHTML;
 
-  // Check if there are tabs to add to nav (for research.html and blog.html)
-  const tabsContainer = document.getElementById('nav-tabs-container');
-  if (tabsContainer) {
-    const tabsContent = tabsContainer.querySelector('.tabs');
-    if (tabsContent && nav) {
-      // Create a nav-tabs div to hold the tabs
-      const navTabsDiv = document.createElement('div');
-      navTabsDiv.className = 'nav-tabs';
-      navTabsDiv.innerHTML = tabsContent.innerHTML;
-      nav.appendChild(navTabsDiv);
-    }
-  }
-
   // Replace the contents of the first <footer>
   const footer = document.querySelector('footer');
   if (footer) footer.innerHTML = footerHTML;
