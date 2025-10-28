@@ -6,11 +6,17 @@ document.querySelectorAll(".tab").forEach(button => {
 
         const layout = button.dataset.layout;
 
+        // Hide all layout divs
+        document.getElementById("layout-presentation").style.display = "none";
+        document.getElementById("layout-mars2035").style.display = "none";
+        document.getElementById("layout-book").style.display = "none";
+
+        // Show the selected layout
         if (layout === "presentation") {
             document.getElementById("layout-presentation").style.display = "block";
-            document.getElementById("layout-book").style.display = "none";
+        } else if (layout === "mars2035") {
+            document.getElementById("layout-mars2035").style.display = "block";
         } else if (layout === "book") {
-            document.getElementById("layout-presentation").style.display = "none";
             document.getElementById("layout-book").style.display = "block";
         }
     });
