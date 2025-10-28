@@ -28,11 +28,20 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
-            <h1>Blogs</h1>
+            <h1>Blogs & Designs</h1>
+            </div>
+        </section>
+        
+        <!-- Blog Tabs -->
+        <section class="research-tabs">
+            <div class="tabs">
+                <button class="tab active" data-layout="blogs">Blogs</button>
+                <button class="tab" data-layout="designs">Designs</button>
             </div>
         </section>
     
         <!-- Blog Section -->
+        <div id="layout-blogs">
         <div id="blog-cards" class="post-catalog">
           <!-- Blog Card 1 -->
           <article class="post-card hidden" data-post-id="1" onclick="showFullPost(1)">
@@ -292,12 +301,165 @@
             </div>
           </article>
         </div>
+        </div>
+        
+        <!-- Designs Section -->
+        <div id="layout-designs" style="display: none;">
+          <div class="designs-grid">
+            <!-- Carousel for Folder 1 -->
+            <div class="design-carousel" data-folder="1">
+              <div class="carousel-container">
+                <div class="carousel-images">
+                  <img src="assets/photos/posts/1/1.jpg" alt="Design 1-1" class="carousel-image active">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel for Folder 2 -->
+            <div class="design-carousel" data-folder="2">
+              <div class="carousel-container">
+                <div class="carousel-images">
+                  <img src="assets/photos/posts/2/1.jpg" alt="Design 2-1" class="carousel-image active">
+                  <img src="assets/photos/posts/2/2.jpg" alt="Design 2-2" class="carousel-image">
+                  <img src="assets/photos/posts/2/3.jpg" alt="Design 2-3" class="carousel-image">
+                  <img src="assets/photos/posts/2/4.jpg" alt="Design 2-4" class="carousel-image">
+                  <img src="assets/photos/posts/2/5.jpg" alt="Design 2-5" class="carousel-image">
+                  <img src="assets/photos/posts/2/6.jpg" alt="Design 2-6" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-dots">
+                  <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                  <span class="dot" onclick="goToSlide(this, 1)"></span>
+                  <span class="dot" onclick="goToSlide(this, 2)"></span>
+                  <span class="dot" onclick="goToSlide(this, 3)"></span>
+                  <span class="dot" onclick="goToSlide(this, 4)"></span>
+                  <span class="dot" onclick="goToSlide(this, 5)"></span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel for Folder 3 -->
+            <div class="design-carousel" data-folder="3">
+              <div class="carousel-container">
+                <div class="carousel-images">
+                  <img src="assets/photos/posts/3/1.jpg" alt="Design 3-1" class="carousel-image active">
+                  <img src="assets/photos/posts/3/2.jpg" alt="Design 3-2" class="carousel-image">
+                  <img src="assets/photos/posts/3/3.jpg" alt="Design 3-3" class="carousel-image">
+                  <img src="assets/photos/posts/3/4.jpg" alt="Design 3-4" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-dots">
+                  <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                  <span class="dot" onclick="goToSlide(this, 1)"></span>
+                  <span class="dot" onclick="goToSlide(this, 2)"></span>
+                  <span class="dot" onclick="goToSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel for Folder 4 -->
+            <div class="design-carousel" data-folder="4">
+              <div class="carousel-container">
+                <div class="carousel-images">
+                  <img src="assets/photos/posts/4/1.webp" alt="Design 4-1" class="carousel-image active">
+                  <img src="assets/photos/posts/4/2.webp" alt="Design 4-2" class="carousel-image">
+                  <img src="assets/photos/posts/4/3.webp" alt="Design 4-3" class="carousel-image">
+                  <img src="assets/photos/posts/4/4.webp" alt="Design 4-4" class="carousel-image">
+                  <img src="assets/photos/posts/4/5.webp" alt="Design 4-5" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-dots">
+                  <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                  <span class="dot" onclick="goToSlide(this, 1)"></span>
+                  <span class="dot" onclick="goToSlide(this, 2)"></span>
+                  <span class="dot" onclick="goToSlide(this, 3)"></span>
+                  <span class="dot" onclick="goToSlide(this, 4)"></span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carousel for Folder 5 -->
+            <div class="design-carousel" data-folder="5">
+              <div class="carousel-container">
+                <div class="carousel-images">
+                  <img src="assets/photos/posts/5/1.jpg" alt="Design 5-1" class="carousel-image active">
+                  <img src="assets/photos/posts/5/2.jpg" alt="Design 5-2" class="carousel-image">
+                  <img src="assets/photos/posts/5/3.jpg" alt="Design 5-3" class="carousel-image">
+                  <img src="assets/photos/posts/5/4.jpg" alt="Design 5-4" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-dots">
+                  <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                  <span class="dot" onclick="goToSlide(this, 1)"></span>
+                  <span class="dot" onclick="goToSlide(this, 2)"></span>
+                  <span class="dot" onclick="goToSlide(this, 3)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Footer Section -->
         <footer class="footer"></footer>
         <script src="js/script.js"></script>
-        <script src="js/tabs.js"></script>
         <script>
+          // Tab switching for blogs page
+          document.querySelectorAll(".tab").forEach(button => {
+            button.addEventListener("click", () => {
+              document.querySelectorAll(".tab").forEach(btn => btn.classList.remove("active"));
+              button.classList.add("active");
+
+              const layout = button.dataset.layout;
+
+              // Hide all layouts first
+              document.getElementById("layout-blogs").style.display = "none";
+              document.getElementById("layout-designs").style.display = "none";
+
+              // Show the selected layout
+              if (layout === "blogs") {
+                document.getElementById("layout-blogs").style.display = "block";
+              } else if (layout === "designs") {
+                document.getElementById("layout-designs").style.display = "block";
+              }
+            });
+          });
+        
           // Function to show full blog post
           function showFullPost(postId) {
             // Hide all cards
@@ -327,6 +489,39 @@
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          
+          // Carousel functions
+          function changeSlide(button, direction) {
+            const carousel = button.closest('.design-carousel');
+            const images = carousel.querySelectorAll('.carousel-image');
+            const dots = carousel.querySelectorAll('.dot');
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            
+            // Remove active class from current image and dot
+            images[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            // Calculate new index
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            
+            // Add active class to new image and dot
+            images[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+          }
+          
+          function goToSlide(dot, index) {
+            const carousel = dot.closest('.design-carousel');
+            const images = carousel.querySelectorAll('.carousel-image');
+            const dots = carousel.querySelectorAll('.dot');
+            
+            // Remove all active classes
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            // Add active class to selected
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
           }
         </script>
     </body>

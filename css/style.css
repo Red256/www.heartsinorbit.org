@@ -942,7 +942,7 @@ div.desc {
 
 /* Research Page Styles */
 .research-tabs {
-  padding: var(--space-2xl) var(--space-xl);
+  padding: var(--space-md) var(--space-xl);
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -951,15 +951,15 @@ div.desc {
 .tabs {
     display: flex;
     justify-content: center;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-lg);
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
     flex-wrap: wrap;
 }
 
 .tab {
-  padding: var(--space-sm) var(--space-xl);
+  padding: var(--space-md) var(--space-2xl);
   border: 2px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   color: var(--text-secondary);
@@ -988,10 +988,9 @@ div.desc {
 
 .tab:hover {
   border-color: var(--space-pink);
-  background: rgba(236, 72, 153, 0.15);
+  background: rgba(236, 72, 153, 0.1);
   color: var(--space-pink);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+  transform: translateY(-2px);
 }
 
 .tab:hover::before {
@@ -1000,10 +999,9 @@ div.desc {
 
 .tab.active {
   background: linear-gradient(135deg, var(--space-pink), var(--space-purple));
-  border-color: transparent;
+  border-color: var(--space-pink);
   color: white;
-  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.4);
-  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
 }
 
 .tab.active::before {
@@ -1745,4 +1743,182 @@ div.desc {
   font-size: 1rem;
   color: gray;
   margin-bottom: 1rem;
+}
+
+/* Designs Grid Section */
+.designs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .designs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+/* Carousel Container */
+.design-carousel {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+[data-theme="dark"] .design-carousel {
+  background: rgba(30, 27, 75, 0.75);
+}
+
+.design-carousel:hover {
+  box-shadow: 0 20px 40px rgba(236, 72, 153, 0.3);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .carousel-btn {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-btn:hover {
+  background: rgba(236, 72, 153, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+[data-theme="dark"] .carousel-btn:hover {
+  background: rgba(236, 72, 153, 0.9);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+[data-theme="dark"] .dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dot:hover {
+  background: rgba(236, 72, 153, 0.7);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: var(--space-pink);
+  transform: scale(1.3);
+}
+
+/* Placeholder Carousels */
+.design-carousel.placeholder {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px dashed var(--border-color);
+  cursor: default;
+}
+
+[data-theme="dark"] .design-carousel.placeholder {
+  background: rgba(30, 27, 75, 0.5);
+}
+
+.design-carousel.placeholder:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.placeholder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.placeholder-content span {
+  text-align: center;
+  opacity: 0.6;
 }
