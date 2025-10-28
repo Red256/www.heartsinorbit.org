@@ -296,5 +296,37 @@
         <footer class="footer"></footer>
         <script src="js/script.js"></script>
         <script src="js/tabs.js"></script>
+        <script>
+          // Add alternating slide classes and scroll animation
+          document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide-stagger');
+            
+            // Add alternating classes
+            slides.forEach((slide, index) => {
+              if (index % 2 === 0) {
+                slide.classList.add('slide-from-left');
+              } else {
+                slide.classList.add('slide-from-right');
+              }
+            });
+            
+            // Create intersection observer
+            const observerOptions = {
+              threshold: 0.2,
+              rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+                }
+              });
+            }, observerOptions);
+            
+            // Observe all slides
+            slides.forEach(slide => observer.observe(slide));
+          });
+        </script>
     </body>
 </html>
