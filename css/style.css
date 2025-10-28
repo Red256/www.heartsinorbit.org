@@ -951,15 +951,15 @@ div.desc {
 .tabs {
     display: flex;
     justify-content: center;
-  gap: var(--space-md);
-  margin-bottom: var(--space-2xl);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
     flex-wrap: wrap;
 }
 
 .tab {
-  padding: var(--space-md) var(--space-2xl);
+  padding: var(--space-sm) var(--space-xl);
   border: 2px solid var(--border-color);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   color: var(--text-secondary);
@@ -988,9 +988,10 @@ div.desc {
 
 .tab:hover {
   border-color: var(--space-pink);
-  background: rgba(236, 72, 153, 0.1);
+  background: rgba(236, 72, 153, 0.15);
   color: var(--space-pink);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
 }
 
 .tab:hover::before {
@@ -999,9 +1000,10 @@ div.desc {
 
 .tab.active {
   background: linear-gradient(135deg, var(--space-pink), var(--space-purple));
-  border-color: var(--space-pink);
+  border-color: transparent;
   color: white;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.4);
+  transform: translateY(-1px);
 }
 
 .tab.active::before {
