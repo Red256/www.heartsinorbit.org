@@ -956,10 +956,10 @@ div.desc {
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   gap: var(--space-md);
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .tab {
